@@ -1,0 +1,15 @@
+<div class="container-fluid text-center font-weight-bold">
+  <p class="texto-home">La Pokedex es una herramienta esencial para cualquier entrenador de Pokemon ya que proporciona información
+    detallada sobre cada Pokemon, incluyendo su apariencia, habilidades y movimientos. Además, permite llevar un
+    registro de todos los Pokemon que se han capturado o visto, lo que facilita la planificación de estrategias de
+    batalla y la compleción de colecciones.</p>
+
+
+  <div class="row row-cards-principal" >
+    <div class="col-2" *ngFor="let pokemon of listaPokemons.slice(0,5)">
+      <div class="card" style="background-color: transparent;border: none;">
+        <img class="principal-cards" [src]="pokemon.sprites.front_default" >
+      </div>
+    </div>
+  </div>
+</div>

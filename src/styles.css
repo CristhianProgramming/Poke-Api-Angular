@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: #DFCFF4;
+    height: 100%;
+}
+
+footer{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.banner{
+    background-color: black;
+    height: auto;
+    width: 100%;
+}
+
+
+.banner-row{
+    width: 100vw;
+    height: 45vh;
+    
+}

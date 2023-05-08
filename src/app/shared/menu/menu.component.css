@@ -1,0 +1,40 @@
+
+@media only screen and (min-width:1000px){
+    
+
+    nav{
+        margin-left: 40%;
+        background-color: transparent;
+    }
+    
+    a{
+        padding: 0px 20px 0px 20px ;
+    }
+    
+    a.navbar-brand{
+        font-weight: bolder;
+        margin: 0px 0px ;
+    }
+    
+    a.nav-link{
+        padding-top: 5px;
+        color: #A99CD9 ;
+    }
+    
+    }
+    
+    .title-page{
+        font-size:8vw;
+        padding: 4vw;
+        font-weight: 900;
+    }
+    
+    .title-page-left{
+        float: right;
+        color: #A99CD9;
+    }
+    
+    .banner-image{
+        width: 27vw;
+    
+    }

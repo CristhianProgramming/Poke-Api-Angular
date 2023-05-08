@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-5">
+        <img [src]="PokemonDetail.sprites.front_default" class="card-img-top" alt="...">
+    </div>
+    <div class="col-12 col-sm-7 mt-4">
+        <h2>{{PokemonDetail.name | uppercase}}</h2>
+        <hr>
+           <h5>TIPO : <button class="btn btn-outline-info m-1" *ngFor="let type of PokemonDetail.types">{{type.type.name}}</button> </h5>
+           <h5>HABILIDADES : <button class="btn btn-outline-warning m-1" *ngFor="let type of PokemonDetail.abilities">{{type.ability.name}}</button> </h5>
+           <p>
+            <small *ngFor="let stat of PokemonDetail.stats">
+                <strong>{{stat.stat.name}} :</strong>  {{stat.base_stat}} 
+            <br>
+            </small>
+           </p>
+    </div>
+
+<div class="col-12 col-sm-4 text-center mt-4 " *ngFor="let item of Evolutions" >
+    <div class="card-header" ><h5>{{item.nombre | uppercase}}</h5></div>
+   <a href="detail/{{item.nombre}}"><div class="card" style="background-color: #DFCFF4;border: none;">
+      <img [src]="item.img" class="card-img-top" alt="...">
+      </div></a>
+</div>
+
+</div>
+
+
+

@@ -1,0 +1,22 @@
+
+
+.principal-cards{
+    width: 20vw;
+    padding: 30px;
+    margin: 20px;
+
+}
+
+.row-cards-principal{
+    width: 100vw;
+    margin-top: 5vh;
+    justify-content: center;
+    background-color: black;
+    margin-bottom: 10vh;
+}
+
+.texto-home{
+    padding: 50px;
+    font-weight: bolder;
+    font-size: larger;
+}
