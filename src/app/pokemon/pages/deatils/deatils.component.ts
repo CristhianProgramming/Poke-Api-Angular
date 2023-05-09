@@ -7,7 +7,7 @@ import { Pokemon } from '../../interfaces/pokemon.interfaces';
 interface evolutions {
   chain: string
   nombre: string,
-  img: string
+  img?: string 
 }
 
 @Component({
@@ -42,16 +42,16 @@ export class DeatilsComponent implements OnInit{
           console.log(r)
           if (r.chain.species) {
             this.service.getPokemonDetails(`${this.service.Url}pokemon/${r.chain.species.name}`).subscribe(r => {
-              this.Evolutions[0] = { chain: 'to', nombre: r.name, img: r.sprites.front_default }
+              this.Evolutions[0] = { chain: 'to', nombre: r.name, img: r.sprites.other?.dream_world.front_default }
             })
             if (r.chain.evolves_to) {
               this.service.getPokemonDetails(`${this.service.Url}pokemon/${r.chain.evolves_to[0].species.name}`).subscribe(r => {
-                this.Evolutions[1] = { chain: 'to', nombre: r.name, img: r.sprites.front_default }
+                this.Evolutions[1] = { chain: 'to', nombre: r.name, img: r.sprites.other?.dream_world.front_default }
               })
             }
             if (r.chain.evolves_to) {
               this.service.getPokemonDetails(`${this.service.Url}pokemon/${r.chain.evolves_to[0].evolves_to[0].species.name}`).subscribe(r => {
-                this.Evolutions[2] = { chain: 'to', nombre: r.name, img: r.sprites.front_default }
+                this.Evolutions[2] = { chain: 'to', nombre: r.name, img: r.sprites.other?.dream_world.front_default }
               })
 
             }

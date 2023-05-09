@@ -1,3 +1,8 @@
 .pokemonlist{
    width: 18rem; background-color: #DFCFF4; border:none
 }
+
+.pokemons-list{
+   width: 14rem;
+   height: 15vh;
+}

@@ -1,16 +1,14 @@
 <div class="row">
     <div class="col mt-3 text-center" *ngFor="let pokemon of listaPokemons">
-        <div [routerLink]="['/detail',pokemon.name]" class="card" style="width: 18rem; background-color: #DFCFF4; border:none;cursor:pointer">
+        <div class="card" style="width: 18rem; background-color: #DFCFF4; border:none;cursor:pointer">
           <div class="card-header" style="background: none;border: none;">
             <h3>{{pokemon.name | uppercase}}</h3>
           </div>
-          <img [src]="pokemon.sprites.front_default" class="card-img-top" alt="...">
+          <img [routerLink]="['/detail',pokemon.name]" [src]="pokemon.sprites.other?.dream_world?.front_default" class="pokemons-list" alt="...">
             <div class="card-body">
               <p class="card-text">
                 <button class="btn btn-secondary m-1" *ngFor="let type of pokemon.types" >
-                  
                   {{type.type.name}}
-                
                 </button>
               </p>
             </div>
